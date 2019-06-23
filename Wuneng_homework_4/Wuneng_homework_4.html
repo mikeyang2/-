@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html ondragstart="return false">
+	<head>
+		<meta charset="utf-8">
+		<title>吾能第四次作业</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#headers{
+				position: absolute;
+				width: 1735px;
+				height: 54px;
+				background: #2A41E8;
+				opacity: 100%;
+				top: 1px;
+				left: 0px;
+			}
+			#headers .location_img{
+				position: absolute;
+				top: 18px;
+				left: 35px;
+				width: 17px;
+				height: 18px;
+				opacity: 100%;
+			}
+			#headers .title{
+                font-family: Helvetica;
+                font-size: 16px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                line-height: 18px;
+				position: absolute;
+				top: 19px;
+				left: 65px;
+			}
+			#headers .phone_img{
+				position: absolute;
+				top: 19px;
+				left: 314px;
+				width: 17px;
+				height: 18px;
+				opacity: 100%;
+			}
+			#headers .phonenumber{
+				font-family: Helvetica;
+                font-size: 16px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                line-height: 18px;
+				position: absolute;
+				top: 19px;
+				left: 345px;
+			}
+			#headers .clock_img{
+				position: absolute;
+				top: 19px;
+				left: 489px;
+				width: 17px;
+				height: 18px;
+				opacity: 100%;
+			}
+			#headers .workingtime{
+				font-family: Helvetica;
+				font-size: 16px;
+				color: #FFFFFF;
+				letter-spacing: 0;
+				line-height: 18px;
+				position: absolute;
+				top: 19px;
+				left: 520px;
+			}
+			#headers .loginregister{
+				font-family: Helvetica;
+                font-size: 14px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+				position: absolute;
+				top: 19px;
+				left: 1590px;
+			}
+			#headers .rearch_button{
+				position: absolute;
+				top: 0px;
+				left: 1253px;
+				width: 57px;
+				height: 54px;
+				background-color: #2A41E8;
+				border: 1px solid #FFFFFF;
+				cursor: pointer;
+			}
+			#headers .facebook_button{
+				position: absolute;
+				top: 0px;
+				left: 1309px;
+				width: 57px;
+				height: 54px;
+				background-color: #2A41E8;
+				border: 1px solid #FFFFFF;
+				cursor: pointer;
+			}
+			#headers .dack_button{
+				position: absolute;
+				top: 0px;
+				left: 1365px;
+				width: 57px;
+				height: 54px;
+				background-color: #2A41E8;
+				border: 1px solid #FFFFFF;
+				cursor: pointer;
+			}
+			#headers .email_button{
+				position: absolute;
+				top: 0px;
+				left: 1423px;
+				width: 57px;
+				height: 54px;
+				background-color: #2A41E8;
+				border: 1px solid #FFFFFF;
+				cursor: pointer;
+			}
+			#headers .wifi_button{
+				position: absolute;
+				top: 0px;
+				left: 1479px;
+				width: 57px;
+				height: 54px;
+				background-color: #2A41E8;
+				border: 1px solid #FFFFFF;
+				cursor: pointer;
+			}
+			#title .caseroyal_img{
+				position: absolute;
+				left: 36px;
+				top: 76.1px;
+				width: 36px;
+				height: 40.9px;
+			}
+			#title .casa{
+				position: absolute;
+				top: 80px;
+				left: 84px;
+				font-family: Helvetica;
+                font-size: 28px;
+                color: gray;
+                 text-align: left;
+			}
+			#title .royal{
+				position: absolute;
+				top: 80px;
+				left: 143.16px;
+				font-family: Helvetica;
+				font-size: 28px;
+				color: #4B4D4F;
+				text-align: left;
+			}
+			#title .line{
+				position: absolute;
+				top: 55px;
+				left: 248px;
+				background: lightgray;
+				width: 1px;
+				height: 82px;
+			}
+			#title .homepage_button{
+				position: absolute;
+				top: 55px;
+				left: 255px;
+				width: 149px;
+				height: 82px;
+				border: none;
+				background-color: #FFFFFF;
+				cursor: pointer;
+			}
+			#title .homepage{
+				position: relative;
+				left: 10px;
+				top: 8px;
+				font-family: Helvetica;
+                font-size: 14px;
+                color: #2A41E8;
+                text-align: left;
+			}
+			#box img{
+				position: absolute;
+				top: 137px;
+				left: 0px;
+				width: 1735px;
+				height: 663px;
+				filter: blur(8px);
+				
+			}
+			#box .guide_home{
+				position: absolute;
+				top: 294px;
+				left: 227px;
+				font-family: Helvetica;
+                font-size: 42px;
+                color: #FFFFFF;
+                text-align: left;
+			}
+			#box .find{
+				position: absolute;
+				top: 356px;
+				left: 227px;
+				font-family: Helvetica;
+				font-size: 18px;
+				color: #FFFFFF;
+				text-align: left;
+			}
+			#rearch_box .rearch_space{
+				position: absolute;
+				top: 431px;
+				left: 227px;
+				background: #FFFFFF;
+                border-radius: 4px;
+                border-radius: 4px;
+				width: 1280px;
+				height: 119px;
+			}
+			#rearch_box .type select{
+				position: relative;
+				appearance:none;
+                -moz-appearance:none;
+                -webkit-appearance:none;
+                -ms-appearance:none;
+				background: #ECECEC;
+				border: none;
+                border-radius: 4px;
+                width: 274px;
+                height: 60px;
+				top: 30px;
+				left: 29px;
+				cursor: pointer;
+			}
+			.rearch_space .status select{
+				position: absolute;
+				appearance:none;
+				-moz-appearance:none;
+				-webkit-appearance:none;
+				-ms-appearance:none;
+				background: #ECECEC;
+				border: none;
+				border-radius: 4px;
+				width: 188px;
+				height: 60px;
+				top: 30px;
+				left: 334px;
+				cursor: pointer;
+			}
+			.rearch_space .input_text textarea{
+				position: absolute;
+				appearance: none;
+				-webkit-appearance:none;
+                -moz-appearance: none;
+				top: 30px;
+				left: 551px;
+				height: 60px;
+				width: 456px;
+				border: none;
+				border-radius: 4px;
+				background: #ECECEC;
+			}
+			.rearch_space .submit button{
+				position: absolute;
+				top: 30px;
+				left: 1037px;
+				appearance: none;
+				-webkit-appearance:none;
+				-moz-appearance: none;
+				width: 214px;
+				height: 60px;
+				background: #2A41E8;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+			.rearch_space .submit button span{
+				font-family: Helvetica;
+                font-size: 18px;
+                color: #FFFFFF;
+                 text-align: left;
+			}
+			#shop_title .title span{
+				position: absolute;
+				top: 920px;
+				left: 722px;
+				font-family: Helvetica;
+                font-size: 14px;
+                color: #8C8C8C;
+                letter-spacing: 2px;
+                text-align: left;
+			}
+			#shop_title .feature{
+				position: absolute;
+				top: 950px;
+				left: 603px;
+				font-family: Helvetica;
+                font-size: 56px;
+                color: #111111;
+                letter-spacing: 0;
+                text-align: left;
+			}
+			#house .house{
+				position: absolute;
+				top: 1104px;
+				left: 243px;
+			}
+			#house .house .house_img{
+				float: left;
+				margin: 31px;
+				width: 398px;
+				height: 519px;
+				background: #FFFFFF;
+				border-radius: 4px;
+				border: 1px solid lightblue;
+			}
+			.house_img .locals_1{
+				position: absolute;
+				top: 3px;
+				left: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="headers">
+			<img class="location_img" src="location.png" alt="localtion图标" />
+			<span class="title">1441 Market St, San Francisco</span>
+			<img class="phone_img" src="phone.png" alt="phone图标" />
+			<span class="phonenumber">(123) 456-7890</span>
+			<img class="clock_img" src="clock.png" alt="clock图标" />
+			<span class="workingtime">Mon - Sun: 8:00am - 6:00pm</span>
+			<button class="rearch_button"><img class="rearch_img" src="rearch2.png" alt="rearch图标" width="20px" height="21px" /></button>
+			<button class="facebook_button"><img class="facebook_img" src="facebook.png" alt="facebook图标" width="20px" height="21px" /></button>
+			<button class="dack_button"><img class="dack_img" src="dack.png" alt="dack图标" width="20px" height="21px" /></button>
+			<button class="email_button"><img class="email_img" src="Email.png" alt="email图标" width="20px" height="21px" /></button>
+			<button class="wifi_button"><img class="wifi_img" src="wifi.png" alt="wifi图标" width="20px" height="21px" /></button>
+			<span class="loginregister">LOGIN/REGISTER</span>
+		</div>
+		<div id="title">
+			<img class="caseroyal_img" src="caseroyal.png" alt="caseroyal图标" />
+			<span class="casa">casa</span>
+			<span class="royal">Royal</span>
+			<div class="line"></div>
+			<button class="homepage_button">
+				<span class="homepage">HOMEPAGE ⬇</span>
+			</button>
+		</div>
+		<div id="title_picture">
+			<div id="box">
+				<img src="home.jpg" alt="公寓照片" />
+				<div class="guide_home">Let Us Guide You Home</div>
+				<div class="find">Find the house of your dreams</div>
+				<div id="rearch_box">
+					<div class="rearch_space">
+						<div class="type">
+							<form>
+								<select>
+									<option></option>
+									<option></option>
+									<option></option>
+								</select>
+							</form>
+						</div>
+						<div class="status">
+							<form>
+								<select>
+									<option></option>
+									<option></option>
+								</select>
+							</form>
+						</div>
+						<div class="input_text">
+							<textarea></textarea>
+						</div>
+						<div class="submit">
+							<button><span>FIND PROPERTIES</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="shop_title">
+			<div class="title">
+				<span>CASAROYAL REAL ESTATE AGENCY</span>
+			</div>
+			<div class="feature">
+				<span>Featured Properties</span>
+			</div>
+		</div>
+		<div id="house">
+			<div class="house">
+				<div class="house_img">
+				    <img src="house1.jpg" width="397px" height="278px"/>
+					<img class="locals_1" src="location.png" width="17px" height="14px"/>
+					<span ></span>
+				</div>
+				<div class="house_img">
+					<img src="house2.jpg" width="397px" height="278px"/>
+					<img class="locals_2" src="location.png" width="17px" height="14px"/>
+				</div>
+				<div class="house_img">
+					<img src="house3.jpg" width="397px" height="278px"/>
+					<img class="locals_3" src="location.png" width="17px" height="14px"/>
+				</div>
+			</div>
+		</div>
+	</body
+</html>
