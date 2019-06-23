@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input id="input" type="text"/>;
+		<div id="song_value">
+			<ul id="album_list"></ul>
+		</div>
+		<div>
+			<ul id="singer"></ul>
+		</div>
+		<div>
+			<ul id="song_name"></ul>
+		</div>
+		<script type="text/javascript">
+			var input = document.getElementById('input');
+			var song_value = document.getElementById('album_list');
+			var singer = document.getElementById('singer');
+			var song_name = document.getElementById('song_name');
+			var value = '';
+			input.oninput = function(){
+				value = input.value;
+				var url = 'https://v1.itooi.cn/netease/search?' + 'keyword=' + value + '&type=song&pageSize=20&page=0';
+				document.onkeydown = function(e){
+					if(e.keyCode == 13){
+						console.log(url);
+						Gotopage(url);
+					}
+				}
+			}
+			function replistener(){
+				var json = JSON.parse(this.responseText);
+				var value = json.data.songs;
+				for(var i = 0; i < value.length; i++){
+					var music_name = value[i].name;
+					var album = value[i].al.name;
+					var singer = value[i].ar;
+					album_list.innerHTML = '<li>' + '专辑名' + album + '</li>';
+					song_name.innerHTML = '<li>' + '音乐名' + music_name + '</li>';
+					singer.innerHTML = '<li>' + '歌手' + singer.name + '</li>';
+					
+				}
+			
+				/*var value = JSON.parse(this.responseText);
+				for(var key in value){
+					var value2 = value[key];
+					for(var key2 in value2){
+						var value3 = value2[key2];
+						console.log(typeof(value3));
+					}
+				}*/
+			}
+			function Gotopage(ur){
+				var Orep = new XMLHttpRequest();
+				Orep.onload = replistener;
+				Orep.open('GET', ur, true);
+				Orep.send();
+			}
+		</script>	
+		
+	</body>
+</html>
